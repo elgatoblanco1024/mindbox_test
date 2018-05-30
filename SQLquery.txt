@@ -1,0 +1,6 @@
+ѕредполагаю, что есть таблицы:
+продукты products с пол€ми id, name
+категории categories с пол€ми id, name
+св€зи catProductRel с пол€ми id, idProduct, idCategory
+
+SELECT products.name, categories.name FROM products LEFT JOIN catProductRel ON catProductRel.idProduct = products.id LEFT JOIN categories ON categories.id = catProductRel.idCategory
