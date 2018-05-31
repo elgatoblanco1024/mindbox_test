@@ -10,13 +10,13 @@ namespace MindBoxGeometry
         public double Radius { get; }
 
         /// <summary>
-        /// Создает круг с указанным радиусом. Нет проверки корректности, используйте на свой страх и риск или пользуйтесь фабрикой!
+        /// Создает круг с указанным радиусом.
         /// </summary>
-        /// <param name="radius"></param>
+        /// <param name="radius">Радиус</param>
         public Circle(double radius)
         {
             // проверяем значения
-            if(radius > 0)
+            Validate(radius);
             Radius = radius;
         }
 
@@ -28,5 +28,16 @@ namespace MindBoxGeometry
         {
             return Math.PI * Radius * Radius;
         }
+
+
+        static private void Validate(double radius)
+        {
+            if (radius <= 0)
+            {
+                throw new ArgumentException("Radius must be greater than 0.");
+            }
+        }
+
+
     }
 }

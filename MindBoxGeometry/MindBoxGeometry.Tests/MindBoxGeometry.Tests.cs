@@ -67,7 +67,7 @@ namespace MindBoxGeometry.Tests
             var factory = new ShapeFactory();
             var triangle = factory.GetShape(shapeType, shapeParams);
 
-            Assert.IsTrue(((Triangle)triangle).IsOrthoTriangle);
+            Assert.IsTrue(((Triangle)triangle).IsRightAngle);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace MindBoxGeometry.Tests
             var factory = new ShapeFactory();
             var triangle = factory.GetShape(shapeType, shapeParams);
 
-            Assert.IsFalse(((Triangle)triangle).IsOrthoTriangle);
+            Assert.IsFalse(((Triangle)triangle).IsRightAngle);
         }
 
         /// <summary>

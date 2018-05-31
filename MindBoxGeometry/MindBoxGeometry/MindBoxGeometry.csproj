@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\Circle.cs" />
+    <Compile Include="Circle.cs" />
     <Compile Include="Interfaces\I2dShape.cs" />
     <Compile Include="Enums\ShapeType.cs" />
-    <Compile Include="Interfaces\ShapeFactory.cs" />
-    <Compile Include="Interfaces\Triangle.cs" />
+    <Compile Include="ShapeFactory.cs" />
+    <Compile Include="Triangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

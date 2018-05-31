@@ -12,10 +12,15 @@ namespace MindboxGeometryDemo
         static void Main(string[] args)
         {
             var factory = new ShapeFactory();
-            I2dShape triangle = factory.GetShape(ShapeType.Triangle, 5, 3, 4);
-            Console.WriteLine("Triangle with sides 5,3,4 has square {0}", triangle.GetSquare());
+            
+            // треугольник
+            I2dShape triangle = factory.GetShape(ShapeType.Triangle, 3, 4, 5);
+            Console.WriteLine("Triangle has square {0}, it's {1}a right angle triangle.",
+                triangle.GetSquare(), ((Triangle)triangle).IsRightAngle == true ? "" : "not ");
+            
+            // круг
             I2dShape circle = factory.GetShape(ShapeType.Circle, 5.5 );
-            Console.WriteLine("Circle with radius 5.5 has square {0}", circle.GetSquare());
+            Console.WriteLine("Circle has square {0}", circle.GetSquare());
             Console.ReadKey();
         }
     }
